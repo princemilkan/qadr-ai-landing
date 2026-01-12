@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import qadrLogo from "@/assets/qadr-logo.png";
 
 const Header = () => {
   return (
@@ -11,10 +12,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">Q</span>
-          </div>
-          <span className="text-xl font-bold text-foreground">Qadr AI</span>
+          <img src={qadrLogo} alt="Qadr AI" className="h-8 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
