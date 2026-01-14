@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Play, Phone } from "lucide-react";
 
+
 const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   
