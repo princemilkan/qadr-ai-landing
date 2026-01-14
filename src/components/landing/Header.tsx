@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import qadrLogo from "@/assets/qadr-logo.png";
 
 const Header = () => {
+  const [showVideoModal, setShowVideoModal] = useState(false);
   return (
+    <>
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -31,15 +34,56 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-            Book a Call
-          </Button>
-          <Button variant="hero" size="sm">
-            Watch Demo
-          </Button>
+          <Button 
+  variant="ghost" 
+  size="sm" 
+  className="hidden sm:inline-flex"
+  onClick={() => window.open('https://calendly.com/princemilkan/30min', '_blank')}
+>
+  Book a Call
+</Button>
+          <Button 
+  variant="hero" 
+  size="sm"
+  onClick={() => setShowVideoModal(true)}
+>
+  Watch Demo
+</Button>
         </div>
       </div>
     </motion.header>
+    {/* Video Modal */}
+      {showVideoModal && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setShowVideoModal(false)}
+        >
+          <div 
+            className="relative w-full max-w-4xl mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowVideoModal(false)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative pt-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/AAJKhT4hkOY?autoplay=1"
+                title="Qadr AI Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+  </>
   );
 };
 
