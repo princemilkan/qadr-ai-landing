@@ -38,7 +38,7 @@ const Header = () => {
   variant="ghost" 
   size="sm" 
   className="hidden sm:inline-flex"
-  onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
+  onClick={() => window.open('https://calendly.com/qadrai_com/30min', '_blank')}
 >
   Book a Call
 </Button>
