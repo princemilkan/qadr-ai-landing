@@ -38,7 +38,7 @@ const Header = () => {
   variant="ghost" 
   size="sm" 
   className="hidden sm:inline-flex"
-  onClick={() => window.open('https://calendly.com/princemilkan/30min', '_blank')}
+  onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
 >
   Book a Call
 </Button>
@@ -73,7 +73,7 @@ const Header = () => {
             <div className="relative pt-[56.25%]">
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/AAJKhT4hkOY?autoplay=1"
+                src="https://www.youtube.com/embed/Cxj32SvtH7o?autoplay=1"
                 title="Qadr AI Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
