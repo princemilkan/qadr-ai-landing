@@ -18,7 +18,7 @@ const Footer = () => {
 
           {/* Contact placeholder */}
           <div className="text-sm text-muted-foreground">
-            contact@qadrai.com
+            qadrai.com@gmail.com
           </div>
         </div>
 
