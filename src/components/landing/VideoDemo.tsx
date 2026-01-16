@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 const VideoDemo = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <section id="demo" className="section-padding">
       <div className="container">
@@ -30,29 +33,30 @@ const VideoDemo = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 glow-effect">
-            {/* Video placeholder with gradient background */}
-            <div className="absolute inset-0 card-gradient flex items-center justify-center">
-              {/* Play button */}
-              <button className="group relative w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/30 transition-all duration-300 hover:scale-110">
-                <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
-                <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/40">
-                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                </div>
-              </button>
-            </div>
-
-            {/* Video embed placeholder - replace src with actual video */}
-            { Uncomment below and add your video URL:
-            <iframe
-              src="https://www.youtube.com/embed/Cxj32SvtH7o?autoplay=1"
-              title="Qadr AI Demo"
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-            }
+            {!showVideo ? (
+              // Play button overlay
+              <div className="absolute inset-0 card-gradient flex items-center justify-center">
+                <button 
+                  onClick={() => setShowVideo(true)}
+                  className="group relative w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/30 transition-all duration-300 hover:scale-110"
+                >
+                  <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
+                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/40">
+                    <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                  </div>
+                </button>
+              </div>
+            ) : (
+              // Video iframe
+              <iframe
+                src="https://www.youtube.com/embed/Cxj32SvtH7o?autoplay=1"
+                title="Qadr AI Demo"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
           </div>
-
           <p className="text-center text-muted-foreground mt-6 text-sm">
             See how Qadr AI transforms customer calls into seamless experiences
           </p>
