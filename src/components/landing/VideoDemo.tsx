@@ -44,7 +44,7 @@ const VideoDemo = () => {
             {/* Video embed placeholder - replace src with actual video */}
             {/* Uncomment below and add your video URL:
             <iframe
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              src="https://www.youtube.com/embed/Cxj32SvtH7o?autoplay=1"
               title="Qadr AI Demo"
               className="absolute inset-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
