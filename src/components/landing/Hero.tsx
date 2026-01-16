@@ -98,18 +98,18 @@ const Hero = () => {
               className="mt-16 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
             >
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">500+</span>
-                <span className="text-sm">Businesses Trust Us</span>
+                <span className="text-2xl font-bold text-foreground">24/7</span>
+                <span className="text-sm">Always Available</span>
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">1M+</span>
-                <span className="text-sm">Calls Handled</span>
+                <span className="text-2xl font-bold text-foreground">AI-Powered</span>
+                <span className="text-sm">Understands Natural Language</span>
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">98%</span>
-                <span className="text-sm">Satisfaction Rate</span>
+                <span className="text-2xl font-bold text-foreground">100%</span>
+                <span className="text-sm">Auto Booking</span>
               </div>
             </motion.div>
           </div>
