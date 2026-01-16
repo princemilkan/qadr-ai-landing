@@ -34,11 +34,21 @@ const VideoDemo = () => {
         >
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 glow-effect">
             {!showVideo ? (
-              // Play button overlay
-              <div className="absolute inset-0 card-gradient flex items-center justify-center">
+              // Play button overlay with YouTube thumbnail
+              <div 
+                className="absolute inset-0 flex items-center justify-center"
+                style={{
+                  backgroundImage: 'url(https://img.youtube.com/vi/Cxj32SvtH7o/maxresdefault.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                {/* Dark overlay for better play button visibility */}
+                <div className="absolute inset-0 bg-black/40" />
+                
                 <button 
                   onClick={() => setShowVideo(true)}
-                  className="group relative w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/30 transition-all duration-300 hover:scale-110"
+                  className="group relative w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/30 transition-all duration-300 hover:scale-110 z-10"
                 >
                   <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping" />
                   <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/40">
