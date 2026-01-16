@@ -45,9 +45,9 @@ const CTA = () => {
                 <Button 
                   variant="heroOutline" 
                   size="lg"
-                  onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
+                  onClick={() => window.open('https://calendly.com/qadrai_com/30min', '_blank')}
                 >
-                  Book a Call
+                  Book a Free Call
                 </Button>
               </div>
             </div>
