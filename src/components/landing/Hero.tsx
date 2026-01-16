@@ -86,7 +86,7 @@ const Hero = () => {
                 onClick={() => window.open('https://calendly.com/qadrai_com/30min', '_blank')}
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Book a Call
+                Book a FREE Call
               </Button>
             </motion.div>
 
