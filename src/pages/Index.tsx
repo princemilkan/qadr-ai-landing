@@ -1,6 +1,8 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import HowItWorks from "@/components/landing/HowItWorks";
+import ROICalculator from "@/components/landing/ROICalculator";
+import Pricing from "@/components/landing/Pricing";
 import Services from "@/components/landing/Services";
 import VideoDemo from "@/components/landing/VideoDemo";
 import Benefits from "@/components/landing/Benefits";
@@ -15,6 +17,8 @@ const Index = () => {
       <main>
         <Hero />
         <HowItWorks />
+        <ROICalculator />
+        <Pricing />
         <Services />
         <VideoDemo />
         <Benefits />
