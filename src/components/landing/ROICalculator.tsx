@@ -23,6 +23,8 @@ const ROICalculator = () => {
   const conversionRate = conversionRates[industry];
 
   // Calculations
+  const totalCallsPerMonth = callsPerDay * 30;
+  const missedCallRate = ((missedCallsPerMonth / totalCallsPerMonth) * 100).toFixed(1);
   const convertedCalls = missedCallsPerMonth * conversionRate;
   const monthlyLoss = convertedCalls * avgCustomerValue;
   const annualLoss = monthlyLoss * 12;
@@ -101,6 +103,9 @@ const ROICalculator = () => {
                 <span>5</span>
                 <span>300</span>
               </div>
+              <p className="text-xs text-red-400 mt-2 font-medium">
+                You're missing {missedCallRate}% of your calls
+              </p>
             </div>
 
             {/* Average Customer Value */}
@@ -162,7 +167,7 @@ const ROICalculator = () => {
                 <div>
                   <h4 className="font-bold text-lg text-red-400 mb-2">You're Losing Money Every Month</h4>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>📞 <span className="text-white font-semibold">{missedCallsPerMonth}</span> missed calls per month</p>
+                    <p>📞 <span className="text-white font-semibold">{missedCallsPerMonth}</span> missed calls per month ({missedCallRate}% of total)</p>
                     <p>💔 <span className="text-white font-semibold">{convertedCalls.toFixed(0)}</span> lost opportunities</p>
                   </div>
                 </div>
