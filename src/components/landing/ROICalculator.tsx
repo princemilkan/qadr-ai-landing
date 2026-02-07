@@ -29,7 +29,7 @@ const ROICalculator = () => {
   const monthlyLoss = convertedCalls * avgCustomerValue;
   const annualLoss = monthlyLoss * 12;
   
-  const qadrCost = 497;
+  const qadrCost = 397;
   const monthlySavings = monthlyLoss - qadrCost;
   const annualSavings = monthlySavings * 12;
   const roi = ((monthlySavings / qadrCost) * 100).toFixed(0);
