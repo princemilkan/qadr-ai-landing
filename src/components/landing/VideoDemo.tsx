@@ -38,7 +38,7 @@ const VideoDemo = () => {
               <div className="w-full md:w-1/2 lg:w-2/5">
                 <h3 className="text-2xl font-bold mb-3">🚨 HVAC Emergency Call</h3>
                 <p className="text-muted-foreground mb-4">
-                  Watch how Qadr AI handles a real 2 AM emergency furnace call - detecting urgency, 
+                  Watch how Qadr AI handles a real emergency furnace call - detecting urgency, 
                   collecting system details, and booking same-day service.
                 </p>
                 <div className="flex flex-wrap gap-2">
