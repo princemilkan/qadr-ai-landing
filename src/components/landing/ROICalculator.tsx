@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { DollarSign, TrendingUp, Phone, AlertCircle } from "lucide-react";
 
 const ROICalculator = () => {
   const [callsPerDay, setCallsPerDay] = useState(50);
-  const [missedPercentage, setMissedPercentage] = useState(20);
+  const [missedCallsPerDay, setMissedCallsPerDay] = useState(10);
   const [avgCustomerValue, setAvgCustomerValue] = useState(200);
   const [industry, setIndustry] = useState("general");
 
@@ -24,8 +23,7 @@ const ROICalculator = () => {
   const conversionRate = conversionRates[industry];
 
   // Calculations
-  const dailyMissedCalls = (callsPerDay * missedPercentage) / 100;
-  const monthlyMissedCalls = dailyMissedCalls * 30;
+  const monthlyMissedCalls = missedCallsPerDay * 30;
   const convertedCalls = monthlyMissedCalls * conversionRate;
   const monthlyLoss = convertedCalls * avgCustomerValue;
   const annualLoss = monthlyLoss * 12;
@@ -37,7 +35,7 @@ const ROICalculator = () => {
   const breakEvenDays = Math.ceil((qadrCost / monthlyLoss) * 30);
 
   return (
-    <section id="roi-calculator" className="section-padding bg-gradient-to-b from-background to-background/50">
+    <section id="roi-calculator" className="py-12 md:py-16 bg-gradient-to-b from-background to-background/50">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,23 +84,23 @@ const ROICalculator = () => {
               </div>
             </div>
 
-            {/* Missed Percentage */}
+            {/* Missed Calls Per Day */}
             <div className="mb-8">
               <label className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium">% of calls you miss</span>
-                <span className="text-primary font-bold text-lg">{missedPercentage}%</span>
+                <span className="text-sm font-medium">Missed calls per day</span>
+                <span className="text-primary font-bold text-lg">{missedCallsPerDay}</span>
               </label>
               <input
                 type="range"
-                min="5"
-                max="50"
-                value={missedPercentage}
-                onChange={(e) => setMissedPercentage(Number(e.target.value))}
+                min="1"
+                max="100"
+                value={missedCallsPerDay}
+                onChange={(e) => setMissedCallsPerDay(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>5%</span>
-                <span>50%</span>
+                <span>1</span>
+                <span>100</span>
               </div>
             </div>
 
