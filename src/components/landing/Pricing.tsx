@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
+import DemoRequestModal from "./DemoRequestModal";
 
 const Pricing = () => {
   const [showDemoModal, setShowDemoModal] = useState(false);
@@ -161,6 +161,11 @@ const Pricing = () => {
           </div>
         </motion.div>
       </div>
+
+      <DemoRequestModal 
+        isOpen={showDemoModal} 
+        onClose={() => setShowDemoModal(false)} 
+      />
     </section>
   );
 };
