@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Play, Phone } from "lucide-react";
 
-
 const Hero = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   
@@ -39,7 +38,7 @@ const Hero = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-                AI-Powered Voice Receptionist
+                Built for HVAC & Home Service Companies
               </span>
             </motion.div>
 
@@ -49,9 +48,9 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
             >
-              Never Miss Another Call.
+              Never Miss a Service Call.
               <br />
-              <span className="text-gradient">Let AI Handle It.</span>
+              <span className="text-gradient">Let AI Handle It 24/7.</span>
             </motion.h1>
 
             <motion.p
@@ -60,8 +59,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
             >
-              Your 24/7 AI receptionist that answers calls, understands customer needs, 
-              books appointments, and keeps your business running—even when you can't pick up.
+              Your AI receptionist answers emergency calls at 2 AM, books appointments, 
+              and captures every lead—even when you're on a service call or closed for the day.
             </motion.p>
 
             <motion.div
@@ -77,13 +76,13 @@ const Hero = () => {
                 onClick={() => setShowVideoModal(true)}
               >
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                Watch HVAC Demo
               </Button>
               <Button 
                 variant="heroOutline" 
                 size="xl" 
                 className="w-full sm:w-auto"
-                onClick={() => window.open('https://calendly.com/qadrai_com/30min', '_blank')}
+                onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Book a FREE Call
@@ -99,17 +98,17 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-bold text-foreground">24/7</span>
-                <span className="text-sm">Always Available</span>
+                <span className="text-sm">Emergency Coverage</span>
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">AI-Powered</span>
-                <span className="text-sm">Understands Natural Language</span>
+                <span className="text-2xl font-bold text-foreground">HVAC-Trained</span>
+                <span className="text-sm">Understands Your Business</span>
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">100%</span>
-                <span className="text-sm">Auto Booking</span>
+                <span className="text-2xl font-bold text-foreground">10 Spots</span>
+                <span className="text-sm">Limited Availability</span>
               </div>
             </motion.div>
           </div>
@@ -138,7 +137,7 @@ const Hero = () => {
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/9VGBsRnagxc?autoplay=1"
-                title="Qadr AI Demo"
+                title="Qadr AI HVAC Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
