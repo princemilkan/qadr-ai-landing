@@ -76,6 +76,9 @@ const ROICalculator = () => {
                 value={callsPerDay}
                 onChange={(e) => setCallsPerDay(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, hsl(var(--primary)) 0%, hsl(var(--primary)) ${((callsPerDay - 10) / (500 - 10)) * 100}%, rgb(51, 65, 85) ${((callsPerDay - 10) / (500 - 10)) * 100}%, rgb(51, 65, 85) 100%)`
+                }}
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
                 <span>10</span>
@@ -96,6 +99,9 @@ const ROICalculator = () => {
                 value={missedCallsPerMonth}
                 onChange={(e) => setMissedCallsPerMonth(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, hsl(var(--primary)) 0%, hsl(var(--primary)) ${((missedCallsPerMonth - 5) / (300 - 5)) * 100}%, rgb(51, 65, 85) ${((missedCallsPerMonth - 5) / (300 - 5)) * 100}%, rgb(51, 65, 85) 100%)`
+                }}
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
                 <span>5</span>
@@ -117,6 +123,9 @@ const ROICalculator = () => {
                 value={avgCustomerValue}
                 onChange={(e) => setAvgCustomerValue(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, hsl(var(--primary)) 0%, hsl(var(--primary)) ${((avgCustomerValue - 50) / (5000 - 50)) * 100}%, rgb(51, 65, 85) ${((avgCustomerValue - 50) / (5000 - 50)) * 100}%, rgb(51, 65, 85) 100%)`
+                }}
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
                 <span>$50</span>
@@ -225,24 +234,26 @@ const ROICalculator = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          background: hsl(var(--primary));
-          cursor: pointer;
-          border-radius: 50%;
-        }
-        .slider::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
-          background: hsl(var(--primary));
-          cursor: pointer;
-          border-radius: 50%;
-          border: none;
-        }
-      `}</style>
+      <style>
+        {`
+          .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: hsl(var(--primary));
+            cursor: pointer;
+            border-radius: 50%;
+          }
+          .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: hsl(var(--primary));
+            cursor: pointer;
+            border-radius: 50%;
+            border: none;
+          }
+        `}
+      </style>
     </section>
   );
 };
