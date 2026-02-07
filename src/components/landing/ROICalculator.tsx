@@ -4,7 +4,7 @@ import { DollarSign, TrendingUp, Phone, AlertCircle } from "lucide-react";
 
 const ROICalculator = () => {
   const [callsPerDay, setCallsPerDay] = useState(50);
-  const [missedCallsPerMonth, setMissedCallsPerMonth] = useState(300); // default: 10/day * 30
+  const [missedCallsPerMonth, setMissedCallsPerMonth] = useState(30);
   const [avgCustomerValue, setAvgCustomerValue] = useState(200);
   const [industry, setIndustry] = useState("general");
 
@@ -23,10 +23,10 @@ const ROICalculator = () => {
   const conversionRate = conversionRates[industry];
 
   // Calculations
+  const totalCallsPerMonth = callsPerDay * 30;
   const convertedCalls = missedCallsPerMonth * conversionRate;
   const monthlyLoss = convertedCalls * avgCustomerValue;
   const annualLoss = monthlyLoss * 12;
-
   const qadrCost = 497;
   const monthlySavings = monthlyLoss - qadrCost;
   const annualSavings = monthlySavings * 12;
@@ -62,7 +62,7 @@ const ROICalculator = () => {
             className="glass-card p-8 rounded-2xl border border-border/50"
           >
             <h3 className="text-2xl font-bold mb-6">Your Business Details</h3>
-            
+
             {/* Calls Per Day */}
             <div className="mb-8">
               <label className="flex items-center justify-between mb-3">
@@ -91,15 +91,15 @@ const ROICalculator = () => {
               </label>
               <input
                 type="range"
-                min="30"
-                max="3000"
+                min="5"
+                max="300"
                 value={missedCallsPerMonth}
                 onChange={(e) => setMissedCallsPerMonth(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>30</span>
-                <span>3,000</span>
+                <span>5</span>
+                <span>300</span>
               </div>
             </div>
 
@@ -162,7 +162,7 @@ const ROICalculator = () => {
                 <div>
                   <h4 className="font-bold text-lg text-red-400 mb-2">You're Losing Money Every Month</h4>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>📞 <span className="text-white font-semibold">{missedCallsPerMonth.toFixed(0)}</span> missed calls per month</p>
+                    <p>📞 <span className="text-white font-semibold">{missedCallsPerMonth}</span> missed calls per month</p>
                     <p>💔 <span className="text-white font-semibold">{convertedCalls.toFixed(0)}</span> lost opportunities</p>
                   </div>
                 </div>
@@ -185,28 +185,23 @@ const ROICalculator = () => {
             <div className="glass-card p-8 rounded-2xl border border-primary/30 bg-primary/5">
               <TrendingUp className="h-12 w-12 text-primary mx-auto mb-4" />
               <h4 className="font-bold text-xl mb-4 text-center">With Qadr AI</h4>
-              
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-3 border-b border-border/30">
                   <span className="text-muted-foreground">Qadr AI Cost</span>
                   <span className="font-bold text-white">${qadrCost}/month</span>
                 </div>
-                
                 <div className="flex justify-between items-center pb-3 border-b border-border/30">
                   <span className="text-muted-foreground">Losses Prevented</span>
                   <span className="font-bold text-primary">+${monthlyLoss.toLocaleString()}</span>
                 </div>
-                
                 <div className="flex justify-between items-center pb-3 border-b border-border/30">
                   <span className="text-muted-foreground">Net Monthly Savings</span>
                   <span className="font-bold text-2xl text-primary">${monthlySavings.toLocaleString()}</span>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">ROI</span>
                   <span className="font-bold text-2xl text-primary">{roi}%</span>
                 </div>
-
                 <div className="mt-6 p-4 bg-primary/10 rounded-lg">
                   <p className="text-sm text-center">
                     <span className="text-primary font-bold">Pays for itself in {breakEvenDays} days</span>
@@ -219,7 +214,7 @@ const ROICalculator = () => {
 
             {/* CTA */}
             <div className="text-center pt-4">
-              <a 
+              
                 href="#pricing"
                 className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg shadow-primary/30"
               >
@@ -239,7 +234,6 @@ const ROICalculator = () => {
           cursor: pointer;
           border-radius: 50%;
         }
-        
         .slider::-moz-range-thumb {
           width: 20px;
           height: 20px;
