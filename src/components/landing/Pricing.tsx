@@ -81,7 +81,7 @@ const Pricing = () => {
                 <p className="text-muted-foreground mb-6">White-glove service, not mass-market software</p>
                 
                 <div className="flex items-end justify-center gap-2 mb-2">
-                  <span className="text-6xl md:text-7xl font-bold text-gradient">$497</span>
+                  <span className="text-6xl md:text-7xl font-bold text-gradient">$397</span>
                   <span className="text-2xl text-muted-foreground pb-2">CAD/month</span>
                 </div>
                 
@@ -135,14 +135,38 @@ const Pricing = () => {
                 </div>
               </div>
 
-              {/* Setup Fee */}
-              <div className="mb-8 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="font-semibold">One-Time Setup Fee WAIVED</p>
-                    <p className="text-xs text-muted-foreground">5+ hours of HVAC-specific customization (normally $397 - FREE for first 10)</p>
+              {/* Setup Fee - PROMINENT & EYE-CATCHING */}
+              <div className="mb-8 relative">
+                {/* "FREE" Badge floating on top */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full shadow-lg shadow-green-500/30 font-bold text-sm flex items-center gap-2 animate-pulse">
+                    <Sparkles className="h-4 w-4" />
+                    SETUP FEE WAIVED - SAVE $395!
                   </div>
-                  <p className="text-2xl font-bold text-primary line-through opacity-60">$395</p>
+                </div>
+                
+                <div className="p-6 pt-10 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent border-2 border-green-500/30 rounded-xl shadow-lg shadow-green-500/10">
+                  <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                    <div className="flex-1">
+                      <p className="font-bold text-xl mb-2 text-green-400">
+                        🎉 Limited-Time Offer for First 10 Clients
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        5+ hours of HVAC-specific customization • Normally $395 • <span className="text-green-400 font-semibold">FREE for early adopters</span>
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center md:items-end">
+                      <div className="relative">
+                        <p className="text-5xl md:text-6xl font-bold text-red-400 line-through decoration-4">$395</p>
+                        <div className="absolute -top-2 -right-14 md:-right-16 rotate-12 bg-green-500 text-white px-4 py-2 rounded-lg text-base font-bold shadow-xl shadow-green-500/40 border-2 border-white">
+                          FREE!
+                        </div>
+                      </div>
+                      <p className="text-sm text-green-400 font-bold mt-2 bg-green-500/20 px-4 py-1 rounded-full">
+                        ✓ You save $395!
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
