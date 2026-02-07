@@ -11,7 +11,7 @@ const Pricing = () => {
     "Emergency vs Routine Call Detection",
     "System Make/Model Collection",
     "Seasonal Messaging (Furnace/AC)",
-    "ServiceTitan & Jobber Integration",
+    "CRM & Scheduling System Integration",
     "Technician Dispatch Alerts",
     "Custom Pricing for YOUR Services"
   ];
@@ -23,10 +23,10 @@ const Pricing = () => {
     "Calendar Integration",
     "Monthly Performance Reports",
     "Direct Founder Support (Text/Call Anytime)",
-    "600 Minutes Included (~150-200 calls)",
+    "500 Minutes Included (~125-150 calls)",
     "Call Transcriptions & Summaries",
     "Multi-language Support",
-    "Real-time Analytics Dashboard"
+    "Call Performance & Revenue Insights"
   ];
 
   return (
@@ -86,13 +86,13 @@ const Pricing = () => {
                 </div>
                 
                 <p className="text-sm text-primary font-medium mb-4">
-                  Includes 600 minutes (~150-200 calls)
+                  Includes 500 minutes (~125-150 calls)
                 </p>
                 
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-500/10 border border-orange-500/30">
                   <AlertTriangle className="h-4 w-4 text-orange-400" />
                   <span className="text-sm text-orange-400 font-medium">
-                    $1.25/min beyond 600 minutes (alerts at 550 mins)
+                    $1.00/min beyond 500 minutes (alerts at 450 mins)
                   </span>
                 </div>
               </div>
@@ -139,10 +139,10 @@ const Pricing = () => {
               <div className="mb-8 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
                 <div className="flex justify-between items-center">
                   <div>
-                    <p className="font-semibold">One-Time Setup Fee</p>
-                    <p className="text-xs text-muted-foreground">5+ hours of HVAC-specific customization</p>
+                    <p className="font-semibold">One-Time Setup Fee WAIVED</p>
+                    <p className="text-xs text-muted-foreground">5+ hours of HVAC-specific customization (normally $397 - FREE for first 10)</p>
                   </div>
-                  <p className="text-2xl font-bold text-primary">$397</p>
+                  <p className="text-2xl font-bold text-primary line-through opacity-60">$395</p>
                 </div>
               </div>
 
