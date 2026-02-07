@@ -27,11 +27,11 @@ const CTA = () => {
             
             <div className="relative px-8 py-16 md:px-16 md:py-24 text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Ready to Transform Your <span className="text-gradient">Customer Calls?</span>
+                Ready to Never Miss Another <span className="text-gradient">Service Call?</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-                Join hundreds of businesses already using Qadr AI to deliver exceptional customer experiences. 
-                See it in action with a personalized demo.
+                Join HVAC and Home Service companies capturing every emergency call, 
+                booking more appointments, and growing revenue—even at 2 AM.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button 
@@ -45,11 +45,14 @@ const CTA = () => {
                 <Button 
                   variant="heroOutline" 
                   size="lg"
-                  onClick={() => window.open('https://calendly.com/qadrai_com/30min', '_blank')}
+                  onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
                 >
-                  Book a FREE Call
+                  Book a Call
                 </Button>
               </div>
+              <p className="text-sm text-muted-foreground mt-6">
+                ⚡ Limited to 10 clients • White-glove service • 30-day guarantee
+              </p>
             </div>
           </motion.div>
         </div>
