@@ -4,7 +4,7 @@ import { DollarSign, TrendingUp, Phone, AlertCircle } from "lucide-react";
 
 const ROICalculator = () => {
   const [callsPerDay, setCallsPerDay] = useState(50);
-  const [missedCallsPerDay, setMissedCallsPerDay] = useState(10);
+  const [missedCallsPerMonth, setMissedCallsPerMonth] = useState(300); // default: 10/day * 30
   const [avgCustomerValue, setAvgCustomerValue] = useState(200);
   const [industry, setIndustry] = useState("general");
 
@@ -23,11 +23,10 @@ const ROICalculator = () => {
   const conversionRate = conversionRates[industry];
 
   // Calculations
-  const monthlyMissedCalls = missedCallsPerDay * 30;
-  const convertedCalls = monthlyMissedCalls * conversionRate;
+  const convertedCalls = missedCallsPerMonth * conversionRate;
   const monthlyLoss = convertedCalls * avgCustomerValue;
   const annualLoss = monthlyLoss * 12;
-  
+
   const qadrCost = 497;
   const monthlySavings = monthlyLoss - qadrCost;
   const annualSavings = monthlySavings * 12;
@@ -84,23 +83,23 @@ const ROICalculator = () => {
               </div>
             </div>
 
-            {/* Missed Calls Per Day */}
+            {/* Missed Calls Per Month */}
             <div className="mb-8">
               <label className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium">Missed calls per day</span>
-                <span className="text-primary font-bold text-lg">{missedCallsPerDay}</span>
+                <span className="text-sm font-medium">Missed calls per month</span>
+                <span className="text-primary font-bold text-lg">{missedCallsPerMonth}</span>
               </label>
               <input
                 type="range"
-                min="1"
-                max="100"
-                value={missedCallsPerDay}
-                onChange={(e) => setMissedCallsPerDay(Number(e.target.value))}
+                min="30"
+                max="3000"
+                value={missedCallsPerMonth}
+                onChange={(e) => setMissedCallsPerMonth(Number(e.target.value))}
                 className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>1</span>
-                <span>100</span>
+                <span>30</span>
+                <span>3,000</span>
               </div>
             </div>
 
@@ -163,7 +162,7 @@ const ROICalculator = () => {
                 <div>
                   <h4 className="font-bold text-lg text-red-400 mb-2">You're Losing Money Every Month</h4>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>📞 <span className="text-white font-semibold">{monthlyMissedCalls.toFixed(0)}</span> missed calls per month</p>
+                    <p>📞 <span className="text-white font-semibold">{missedCallsPerMonth.toFixed(0)}</span> missed calls per month</p>
                     <p>💔 <span className="text-white font-semibold">{convertedCalls.toFixed(0)}</span> lost opportunities</p>
                   </div>
                 </div>
