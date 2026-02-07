@@ -1,25 +1,32 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, Wrench, AlertTriangle } from "lucide-react";
 import DemoRequestModal from "./DemoRequestModal";
 
 const Pricing = () => {
   const [showDemoModal, setShowDemoModal] = useState(false);
 
-  const features = [
-    "24/7 AI Voice Receptionist",
-    "Unlimited Call Handling",
-    "Natural Language Understanding",
-    "Appointment Booking & Scheduling",
+  const hvacFeatures = [
+    "Emergency vs Routine Call Detection",
+    "System Make/Model Collection",
+    "Seasonal Messaging (Furnace/AC)",
+    "ServiceTitan & Jobber Integration",
+    "Technician Dispatch Alerts",
+    "Custom Pricing for YOUR Services"
+  ];
+
+  const includedFeatures = [
+    "24/7 AI Answering - Never Miss Emergency Calls",
+    "Automatic Appointment Booking",
+    "SMS & Email Confirmations",
+    "Calendar Integration",
+    "Monthly Performance Reports",
+    "Direct Founder Support (Text/Call Anytime)",
+    "600 Minutes Included (~150-200 calls)",
     "Call Transcriptions & Summaries",
-    "CRM Integration",
     "Multi-language Support",
-    "Real-time Analytics Dashboard",
-    "Custom Voice & Personality",
-    "SMS & Email Follow-ups",
-    "Priority Support",
-    "No Setup Fees"
+    "Real-time Analytics Dashboard"
   ];
 
   return (
@@ -38,12 +45,15 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">Pricing</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+            <Wrench className="h-4 w-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">HVAC & Home Services Specialist</span>
+          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            Simple, <span className="text-gradient">Transparent</span> Pricing
+            Built for <span className="text-gradient">HVAC Companies</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            One flat rate. No hidden fees. Cancel anytime.
+            Not a generic service. Purpose-built for Home Service and HVAC businesses.
           </p>
         </motion.div>
 
@@ -52,70 +62,107 @@ const Pricing = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Pricing Card */}
           <div className="relative glass-card p-8 md:p-12 rounded-3xl border-2 border-primary/30 overflow-hidden">
             {/* Popular Badge */}
             <div className="absolute top-0 right-0 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-2 text-sm font-semibold flex items-center gap-2">
               <Sparkles className="h-4 w-4" />
-              BEST VALUE
+              LIMITED TO 10 CLIENTS
             </div>
 
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
 
             <div className="relative">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">Professional Plan</h3>
-                <p className="text-muted-foreground mb-6">Everything you need to never miss a call</p>
+              <div className="text-center mb-10">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">HVAC-Specialist Plan</h3>
+                <p className="text-muted-foreground mb-6">White-glove service, not mass-market software</p>
                 
                 <div className="flex items-end justify-center gap-2 mb-2">
-                  <span className="text-6xl md:text-7xl font-bold text-gradient">$297</span>
-                  <span className="text-2xl text-muted-foreground pb-2">/month</span>
+                  <span className="text-6xl md:text-7xl font-bold text-gradient">$497</span>
+                  <span className="text-2xl text-muted-foreground pb-2">CAD/month</span>
                 </div>
                 
-                <p className="text-sm text-muted-foreground">
-                  Less than the cost of a part-time receptionist
+                <p className="text-sm text-primary font-medium mb-4">
+                  Includes 600 minutes (~150-200 calls)
                 </p>
+                
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-orange-500/10 border border-orange-500/30">
+                  <AlertTriangle className="h-4 w-4 text-orange-400" />
+                  <span className="text-sm text-orange-400 font-medium">
+                    $1.25/min beyond 600 minutes (alerts at 550 mins)
+                  </span>
+                </div>
               </div>
 
-              {/* Features Grid */}
-              <div className="grid md:grid-cols-2 gap-4 mb-10">
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }}
-                    className="flex items-start gap-3"
-                  >
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                      <Check className="h-4 w-4 text-primary" />
+              {/* HVAC-Specific Features */}
+              <div className="mb-8 p-6 bg-primary/5 border border-primary/20 rounded-xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <Wrench className="h-5 w-5 text-primary" />
+                  <h4 className="font-bold text-lg">HVAC-Specific Features</h4>
+                </div>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {hvacFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{feature}</span>
                     </div>
-                    <span className="text-sm md:text-base">{feature}</span>
-                  </motion.div>
-                ))}
+                  ))}
+                </div>
+              </div>
+
+              {/* Included Features */}
+              <div className="mb-8">
+                <h4 className="font-bold text-lg mb-4">Everything Included</h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {includedFeatures.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.3 + index * 0.03 }}
+                      className="flex items-start gap-3"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                        <Check className="h-3 w-3 text-primary" />
+                      </div>
+                      <span className="text-sm">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Setup Fee */}
+              <div className="mb-8 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="font-semibold">One-Time Setup Fee</p>
+                    <p className="text-xs text-muted-foreground">5+ hours of HVAC-specific customization</p>
+                  </div>
+                  <p className="text-2xl font-bold text-primary">$397</p>
+                </div>
               </div>
 
               {/* Money Back Guarantee */}
-              <div className="mb-8 p-6 bg-primary/5 border border-primary/20 rounded-xl text-center">
-                <p className="font-semibold text-lg mb-1">30-Day Money-Back Guarantee</p>
+              <div className="mb-8 p-6 bg-green-500/5 border border-green-500/20 rounded-xl text-center">
+                <p className="font-semibold text-lg mb-1 text-green-400">30-Day Money-Back Guarantee</p>
                 <p className="text-sm text-muted-foreground">
                   Not satisfied? Get a full refund, no questions asked.
                 </p>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button 
                   variant="hero" 
                   size="xl"
                   className="w-full sm:w-auto"
                   onClick={() => window.open('https://calendly.com/qadrai_com', '_blank')}
                 >
-                  Get Started Now
+                  Book Your Setup Call
                 </Button>
                 <Button 
                   variant="heroOutline" 
@@ -128,10 +175,10 @@ const Pricing = () => {
               </div>
 
               {/* Trust Indicators */}
-              <div className="mt-8 pt-8 border-t border-border/50 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
+              <div className="pt-6 border-t border-border/50 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-primary" />
-                  <span>No Setup Fees</span>
+                  <span>Limited to 10 Clients</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-primary" />
@@ -139,16 +186,16 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-primary" />
-                  <span>24/7 Support</span>
+                  <span>Direct Founder Support</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* FAQ or Additional Info */}
+          {/* Additional Info */}
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
-              Questions about pricing or need a custom plan?
+              Most HVAC companies use 400-800 minutes/month. Need a custom plan?
             </p>
             <a 
               href="https://calendly.com/qadrai_com" 
@@ -156,7 +203,7 @@ const Pricing = () => {
               rel="noopener noreferrer"
               className="text-primary hover:underline font-semibold"
             >
-              Talk to our team →
+              Talk to our founder directly →
             </a>
           </div>
         </motion.div>
