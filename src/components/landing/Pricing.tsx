@@ -135,34 +135,34 @@ const Pricing = () => {
                 </div>
               </div>
 
-              {/* Setup Fee - PROMINENT & EYE-CATCHING */}
+              {/* Setup Fee - PROMINENT & MOBILE-FRIENDLY */}
               <div className="mb-8 relative">
-                {/* "FREE" Badge floating on top */}
+                {/* "FREE" Badge floating on top - responsive */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-full shadow-lg shadow-green-500/30 font-bold text-sm flex items-center gap-2 animate-pulse">
-                    <Sparkles className="h-4 w-4" />
-                    SETUP FEE WAIVED - SAVE $395!
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg shadow-green-500/30 font-bold text-xs sm:text-sm flex items-center gap-1 sm:gap-2">
+                    <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="whitespace-nowrap">SAVE $395!</span>
                   </div>
                 </div>
                 
-                <div className="p-6 pt-10 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent border-2 border-green-500/30 rounded-xl shadow-lg shadow-green-500/10">
-                  <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                    <div className="flex-1">
-                      <p className="font-bold text-xl mb-2 text-green-400">
-                        🎉 Limited-Time Offer for First 10 Clients
+                <div className="p-4 sm:p-6 pt-8 sm:pt-10 bg-gradient-to-br from-green-500/10 via-green-500/5 to-transparent border-2 border-green-500/30 rounded-xl shadow-lg shadow-green-500/10">
+                  <div className="flex flex-col gap-4 text-center">
+                    <div>
+                      <p className="font-bold text-base sm:text-xl mb-2 text-green-400">
+                        🎉 First 10 Clients Only
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        5+ hours of HVAC-specific customization • Normally $395 • <span className="text-green-400 font-semibold">FREE for early adopters</span>
+                      <p className="text-xs sm:text-sm text-muted-foreground px-2">
+                        5+ hours HVAC customization • Normally $395 • <span className="text-green-400 font-semibold">FREE</span>
                       </p>
                     </div>
-                    <div className="flex flex-col items-center md:items-end">
-                      <div className="relative">
-                        <p className="text-5xl md:text-6xl font-bold text-red-400 line-through decoration-4">$395</p>
-                        <div className="absolute -top-2 -right-14 md:-right-16 rotate-12 bg-green-500 text-white px-4 py-2 rounded-lg text-base font-bold shadow-xl shadow-green-500/40 border-2 border-white">
+                    <div className="flex flex-col items-center">
+                      <div className="relative inline-block">
+                        <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-400 line-through decoration-2 sm:decoration-4">$395</p>
+                        <div className="absolute -top-1 sm:-top-2 -right-12 sm:-right-16 rotate-12 bg-green-500 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-lg text-sm sm:text-base font-bold shadow-xl shadow-green-500/40 border-2 border-white">
                           FREE!
                         </div>
                       </div>
-                      <p className="text-sm text-green-400 font-bold mt-2 bg-green-500/20 px-4 py-1 rounded-full">
+                      <p className="text-xs sm:text-sm text-green-400 font-bold mt-3 bg-green-500/20 px-3 sm:px-4 py-1 rounded-full">
                         ✓ You save $395!
                       </p>
                     </div>
