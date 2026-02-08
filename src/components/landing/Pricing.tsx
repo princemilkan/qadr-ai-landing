@@ -141,7 +141,7 @@ const Pricing = () => {
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                   <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg shadow-green-500/30 font-bold text-xs sm:text-sm flex items-center gap-1 sm:gap-2">
                     <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
-                    <span className="whitespace-nowrap">SAVE $395!</span>
+                    <span className="whitespace-nowrap">SETUP FEE WAIVED - SAVE $395!</span>
                   </div>
                 </div>
                 
