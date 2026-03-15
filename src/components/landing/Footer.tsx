@@ -20,7 +20,7 @@ const Footer = () => {
           
           {/* Contact */}
           <div className="text-sm text-muted-foreground">
-            qadrai.com@gmail.com
+            info@qadrai.com
           </div>
         </div>
         
