@@ -30,8 +30,8 @@ const CTA = () => {
                 Ready to Never Miss Another <span className="text-gradient">Service Call?</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-                Join HVAC and Home Service companies capturing every emergency call, 
-                booking more appointments, and growing revenue—even at 2 AM.
+                Help your HVAC or home-service business answer after-hours calls, 
+                capture potential leads, and offer supported appointment booking—even at 2 AM.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button 
@@ -51,7 +51,7 @@ const CTA = () => {
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
-                ⚡ Limited to 10 clients • White-glove service • 30-day guarantee
+                Professional implementation • Flexible ownership • Fully managed option
               </p>
             </div>
           </motion.div>
