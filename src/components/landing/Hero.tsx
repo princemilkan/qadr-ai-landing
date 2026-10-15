@@ -48,9 +48,9 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
             >
-              Never Miss a Service Call.
+              Your Calls Answered. Your Leads Captured.
               <br />
-              <span className="text-gradient">Let AI Handle It 24/7.</span>
+              <span className="text-gradient">Even After Hours.</span>
             </motion.h1>
 
             <motion.p
@@ -60,7 +60,7 @@ const Hero = () => {
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
             >
               Your AI receptionist answers emergency calls at 2 AM, books appointments, 
-              and captures every lead—even when you're on a service call or closed for the day.
+              and helps capture leads—even when you're on a service call or closed for the day.
             </motion.p>
 
             <motion.div
@@ -107,8 +107,8 @@ const Hero = () => {
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">10 Spots</span>
-                <span className="text-sm">Limited Availability</span>
+                <span className="text-2xl font-bold text-foreground">Your Choice</span>
+                <span className="text-sm">Own It or Fully Managed</span>
               </div>
             </motion.div>
           </div>
