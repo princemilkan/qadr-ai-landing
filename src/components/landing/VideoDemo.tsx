@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 const VideoDemo = () => {
-  const [showHVACVideo, setShowHVACVideo] = useState(false);
+  const [showEmergencyVideo, setShowEmergencyVideo] = useState(false);
   const [showLandscapeVideo, setShowLandscapeVideo] = useState(false);
 
   return (
@@ -22,12 +22,12 @@ const VideoDemo = () => {
               See <span className="text-gradient">Qadr AI</span> in Action
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Watch real HVAC emergency calls and see how our AI handles customer conversations seamlessly.
+              Watch a home-service emergency call example and see how our AI handles customer conversations.
             </p>
           </motion.div>
 
           <div className="max-w-5xl mx-auto space-y-8">
-            {/* HVAC Emergency Video - Portrait/Vertical */}
+            {/* Emergency Call Video - Portrait/Vertical */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const VideoDemo = () => {
               className="flex flex-col md:flex-row gap-6 items-center"
             >
               <div className="w-full md:w-1/2 lg:w-2/5">
-                <h3 className="text-2xl font-bold mb-3">🚨 HVAC Emergency Call</h3>
+                <h3 className="text-2xl font-bold mb-3">🚨 Emergency Service Call</h3>
                 <p className="text-muted-foreground mb-4">
                   Watch how Qadr AI handles a real emergency furnace call - detecting urgency, 
                   collecting system details, and booking same-day service.
@@ -56,11 +56,11 @@ const VideoDemo = () => {
 
               <div className="w-full md:w-1/2 lg:w-3/5">
                 <div className="relative w-full max-w-sm mx-auto">
-                  {!showHVACVideo ? (
+                  {!showEmergencyVideo ? (
                     <div 
                       className="relative rounded-2xl overflow-hidden border border-border/50 glow-effect cursor-pointer"
                       style={{ aspectRatio: '9/16' }}
-                      onClick={() => setShowHVACVideo(true)}
+                      onClick={() => setShowEmergencyVideo(true)}
                     >
                       <div 
                         className="absolute inset-0 flex items-center justify-center"
@@ -84,7 +84,7 @@ const VideoDemo = () => {
                       <iframe
                         className="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/9VGBsRnagxc?autoplay=1"
-                        title="HVAC Emergency Call Demo"
+                        title="Emergency Service Call Demo"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
