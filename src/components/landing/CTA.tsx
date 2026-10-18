@@ -30,7 +30,7 @@ const CTA = () => {
                 Ready to Never Miss Another <span className="text-gradient">Service Call?</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-                Help your HVAC or home-service business answer after-hours calls, 
+                Help your home-service business answer after-hours calls, 
                 capture potential leads, and offer supported appointment booking—even at 2 AM.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
