@@ -71,7 +71,7 @@ const Pricing = () => {
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto mb-12">
         <p className="text-primary text-sm font-semibold uppercase tracking-wider">Simple, Transparent Pricing</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-5">Choose How You Want <span className="text-gradient">Your AI Managed</span></h2>
-        <p className="text-muted-foreground text-lg">Built for HVAC and other home-service teams. Choose complete ownership or let us handle the technology for you.</p>
+        <p className="text-muted-foreground text-lg">Built for home-service teams. Choose complete ownership or let us handle the technology for you.</p>
       </motion.div>
       <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch">
         {card("Own It", false, ownFeatures)}
