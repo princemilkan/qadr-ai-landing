@@ -151,7 +151,7 @@ const Header = () => {
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/9VGBsRnagxc?autoplay=1"
-                title="Qadr AI Demo - HVAC Emergency"
+                title="Qadr AI Emergency Call Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -160,7 +160,7 @@ const Header = () => {
             
             {/* Optional: Video title/description below */}
             <p className="text-white text-center mt-4 text-sm">
-              🚨 HVAC Emergency Call Demo (2:40)
+              🚨 Emergency Call Demo (2:40)
             </p>
           </div>
         </div>
