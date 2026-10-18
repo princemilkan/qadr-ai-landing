@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Headphones, CalendarCheck, PhoneMissed, FileText } from "lucide-react";
+import { Headphones, CalendarCheck, PhoneMissed, FileText, ShieldCheck } from "lucide-react";
 
 const services = [
   {
@@ -19,6 +19,12 @@ const services = [
     title: "Missed Call Recovery",
     description: "Automatically follows up on missed calls so you never lose a potential customer again.",
     highlight: "Zero Missed Leads",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Spam Call Filtering",
+    description: "Screen suspicious calls, reduce unwanted interruptions, and route uncertain callers according to your business rules. Availability depends on your phone setup.",
+    highlight: "Smart Screening",
   },
   {
     icon: FileText,
