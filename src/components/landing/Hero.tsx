@@ -38,7 +38,7 @@ const Hero = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm text-muted-foreground">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-                Built for HVAC & Home Service Companies
+                Built for Home Service Businesses
               </span>
             </motion.div>
 
@@ -76,7 +76,7 @@ const Hero = () => {
                 onClick={() => setShowVideoModal(true)}
               >
                 <Play className="mr-2 h-5 w-5" />
-                Watch HVAC Demo
+                Watch Demo
               </Button>
               <Button 
                 variant="heroOutline" 
@@ -102,7 +102,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-foreground">HVAC-Trained</span>
+                <span className="text-2xl font-bold text-foreground">Service-Ready</span>
                 <span className="text-sm">Understands Your Business</span>
               </div>
               <div className="w-px h-8 bg-border hidden sm:block" />
@@ -140,7 +140,7 @@ const Hero = () => {
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/9VGBsRnagxc?autoplay=1"
-                title="Qadr AI HVAC Emergency Demo"
+                title="Qadr AI Emergency Call Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -149,7 +149,7 @@ const Hero = () => {
             
             {/* Video title/description below */}
             <p className="text-white text-center mt-4 text-sm">
-              🚨 HVAC Emergency Call Demo (2:40)
+              🚨 Emergency Call Demo (2:40)
             </p>
           </div>
         </div>
