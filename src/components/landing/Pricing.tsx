@@ -9,6 +9,7 @@ const ownFeatures = [
   "Custom AI receptionist and business knowledge base",
   "24/7 inbound answering and lead qualification",
   "Emergency recognition and live transfer configuration",
+  "Configurable spam call screening and filtering",
   "Supported calendar booking and confirmations",
   "SMS confirmations where supported and activated",
   "One location and one primary AI receptionist",
@@ -18,6 +19,7 @@ const ownFeatures = [
 const conciergeFeatures = [
   "Custom implementation and business-branded experience",
   "24/7 answering, intake and emergency routing",
+  "Configurable spam call screening and filtering",
   "Supported booking, SMS and email confirmations",
   "750 AI call minutes included each month",
   "Platform administration and Retell billing managed",
@@ -32,6 +34,7 @@ const questions = [
   ["Who pays the Retell AI bill?", "Own It clients pay Retell, telephony, SMS and third-party providers directly. Concierge includes managed Retell usage up to 750 AI call minutes per month."],
   ["Is there a setup fee?", "Yes. Own It is CAD $2,997 one-time. Concierge is CAD $997 one-time plus CAD $797 per month."],
   ["What happens after 750 AI minutes?", "Concierge usage beyond 750 AI minutes is billed at CAD $0.75 per additional minute."],
+  ["Does spam filtering block every unwanted call?", "No. Spam screening uses configured rules and available phone-platform capabilities. Suspicious calls may be flagged or filtered, while uncertain calls can be routed for review. We confirm the supported setup before launch."],
   ["Can you use my existing phone number?", "Often through supported call forwarding or number-porting arrangements, depending on your carrier and configuration. We verify feasibility before implementation."],
   ["Does the AI send SMS and email confirmations?", "SMS is available where supported and activated. Booking emails are delivered through the connected scheduling provider where supported."],
   ["Can it book appointments into my calendar?", "Yes, with a supported calendar or scheduling service configured for your workflow."],
