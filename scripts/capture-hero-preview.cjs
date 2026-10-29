@@ -20,7 +20,7 @@ const fs = require("fs");
       }
     }
     if (!loaded) throw new Error("Local website failed to start");
-    await page.locator("section").first().waitFor();
+    await page.locator("section.min-h-screen").first().waitFor({ state: "visible" });
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(1200);
     fs.mkdirSync("dist", { recursive: true });
