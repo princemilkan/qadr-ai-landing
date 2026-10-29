@@ -33,6 +33,13 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Capture actual hero section for link previews
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+          npm run dev -- --host 127.0.0.1 > /tmp/qadr-vite.log 2>&1 &
+          node scripts/capture-hero-preview.cjs
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
