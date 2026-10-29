@@ -12,7 +12,7 @@ const fs = require("fs");
     let loaded = false;
     for (let attempt = 0; attempt < 30; attempt++) {
       try {
-        await page.goto("http://127.0.0.1:5173/", { waitUntil: "networkidle", timeout: 10000 });
+        await page.goto("http://127.0.0.1:8080/", { waitUntil: "networkidle", timeout: 10000 });
         loaded = true;
         break;
       } catch (_) {
